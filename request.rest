@@ -1,0 +1,150 @@
+### REGISTER
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "nudriin",
+    "password": "hishasyl115a1408",
+    "name" : "Nurdin"
+}
+
+### LOGIN 806fd796-28ed-4696-83b7-a689ec89df64
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "nudriin",
+    "password": "hishasyl115a1"
+}
+
+### GET CURRENT USER
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### UPDATE NAME
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+{
+    "name" : "Nurdin"
+}
+
+### UPDATE PASSWORD
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+{
+    "password" : "hishasyl115a1"
+}
+
+### LOGOUT
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### ADD CONTACT
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+# 452
+{
+    "first_name": "Joko",
+    "last_name": "Morro",
+    "email": "joko@morro.com",
+    "phone": "0812244422"
+}
+
+### GET CONTACT
+GET http://localhost:3000/api/contacts/451
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### SEARCH ALL CONTACT
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### SEARCH BY QUERY
+GET http://localhost:3000/api/contacts?size=1&page=2
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### UPDATE
+PUT http://localhost:3000/api/contacts/452
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+{
+    "first_name": "Hirohito Kuroisi",
+    "last_name": "Murayama",
+    "email": "hiro@kuro.com",
+    "phone": "081231234122"
+}
+
+### UPDATE
+DELETE  http://localhost:3000/api/contacts/451
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### CREATE ADDRESS
+POST http://localhost:3000/api/contacts/452/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+{
+    "street": "Jalan New York",
+    "city": "New York",
+    "province": "New York",
+    "country": "United States",
+    "postal_code": "73111"
+}
+
+### LIST ADDRESS
+GET http://localhost:3000/api/contacts/452/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### GET ADDRESS 500 - 502
+GET http://localhost:3000/api/contacts/452/addresses/502
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+### UPDATE ADDRESS 500 - 502
+PUT http://localhost:3000/api/contacts/452/addresses/502
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
+{
+    "street": "Jalan Shibuya",
+    "city": "Tokyo",
+    "province": "Japan",
+    "country": "Japan",
+    "postal_code": "73111"
+}
+
+### REMOVE ADDRESS
+DELETE http://localhost:3000/api/contacts/452/addresses/502
+Content-Type: application/json
+Accept: application/json
+Authorization: 806fd796-28ed-4696-83b7-a689ec89df64
+
